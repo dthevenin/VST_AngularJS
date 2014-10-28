@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       },
       toolkit: {
         src: sources_js,
-        dest: 'tests/vs_angular.js'
+        dest: 'build/vs_angular.js'
       },
     },
     less: {
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
           paths: ["src/css/generic/", "src/css/flat"]
         },
         files: {
-          "tests/flat.css": "src/css/flat/flat.less",
-          "tests/generic.css": "src/css/generic/generic.less"
+          "build/flat.css": "src/css/flat/flat.less",
+          "build/generic.css": "src/css/generic/generic.less"
         }
       }
     },
