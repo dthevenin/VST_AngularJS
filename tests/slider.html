@@ -1,0 +1,35 @@
+<html lang="en" ng-app="vinisketch">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-touch.js"></script>
+
+    <script type="text/javascript" src="vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="flat.css"></link>
+    <script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body class="theme application vertical_layout">
+
+  <br/>
+  <vs-slider></vs-slider>
+  <br/>
+  <vs-slider value="10" ng-model="momo"></vs-slider>
+  <br/>
+  <vs-slider ng-model="momo"></vs-slider>
+  <span>{{momo}}</span>
+  <br/>
+  <vs-progress-bar range="[0,200]" ng-model="momo"></vs-progress-bar>
+  <br/>
+  <input type="text" ng-model="momo2"></input>
+  <br/>
+  <vs-progress-bar range="[-100,200]" ng-model="momo2"></vs-progress-bar>
+  <br/>
+  <vs-progress-bar indeterminate></vs-progress-bar>
+
+</script>
+
+
+</body></html>

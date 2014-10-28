@@ -1,0 +1,46 @@
+<html lang="en" ng-app="vinisketch">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-touch.js"></script>
+
+    <script type="text/javascript" src="vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="flat.css"></link>
+    <script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body class="theme application vertical_layout">
+
+  <vs-button></vs-button>
+  <vs-button>Coco</vs-button>
+  <vs-button style="white">Default White</vs-button>
+  <vs-button style="grey">Default Grey</vs-button>
+  <vs-button style="green">Default Green</vs-button>
+  <vs-button style="red">Default Red</vs-button>
+  <vs-button type="nav">Nav</vs-button>
+  <vs-button type="nav" style="black">Nav</vs-button>
+  <vs-button type="nav" style="red">Nav</vs-button>
+  <vs-button type="nav" style="green">Nav</vs-button>
+  <vs-button type="nav_back">Nav Back</vs-button>
+  <vs-button type="nav_back" style="black">Nav Back</vs-button>
+  <vs-button type="nav_back" style="red">Nav Back</vs-button>
+  <vs-button type="nav_back" style="green">Nav Back</vs-button>
+  <vs-button type="nav_forward">Nav Forward</vs-button>
+
+  <vs-segmented-button ng-model="modelSB">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </vs-segmented-button>
+  <span>{{modelSB}}</span>
+  <vs-segmented-button type="bar">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </vs-segmented-button>
+  </script>
+
+
+</body></html>

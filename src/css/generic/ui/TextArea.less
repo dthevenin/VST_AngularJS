@@ -1,0 +1,23 @@
+.vs_ui_textarea {
+  min-height:30px;
+  min-width: 150px; width: 0px;
+  border: 0px;
+  margin: 0px;
+  padding: 5px;
+
+  overflow: hidden;
+  color: inherit;
+}
+
+textarea {
+  .user-select(text);
+  .appearance(none);
+  cursor: text;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+textarea:focus {
+  outline: none;
+}

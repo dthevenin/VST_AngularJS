@@ -1,0 +1,54 @@
+.vs_ui_radiobutton {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.vs_ui_radiobutton > fieldset {
+  width: 100%;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  font-size: inherit;
+}
+
+.vs_ui_radiobutton fieldset > input[type="radio"]:first-child {
+  border: none;
+}
+
+.vs_ui_radiobutton input[type="radio"] {
+  width: 100%;
+   .appearance(none);
+  font-size: inherit;
+
+  margin: 0px;
+  min-height: 30px;
+  width:30px;
+  margin-top: 0px;
+  float: right;
+  outline: none;
+  border: none;
+
+  background: transparent;
+  display: none;
+}
+
+.vs_ui_radiobutton input[type="radio"]:checked {
+  outline: none;
+}
+
+.vs_ui_radiobutton label {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.vs_ui_radiobutton label::after {
+  .box-sizing(border-box);
+  .user-select(none);
+  
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}

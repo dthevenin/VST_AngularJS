@@ -1,0 +1,54 @@
+/** @licence
+  Copyright (C) 2009-2012. David Thevenin, ViniSketch SARL (c), and 
+  contributors. All rights reserved
+  
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Lesser General Public License as published
+  by the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+  
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+.vs_ui_toolbar {
+  width: 100%;
+  bottom:0px;
+  z-index: 2000;
+  
+  overflow: hidden;
+  position: fixed;
+}
+
+.vs_ui_toolbar > div
+{
+  width: 100%;
+  height: 100%;
+  .box-orient(horizontal);
+}
+
+.vs_ui_toolbar > div > div
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  text-align: center;
+  height: 100%;
+  position:relative;
+  .box-flex(1);
+}
+
+.vs_ui_toolbar.black_style {
+}
+
+.vs_ui_toolbar.black_translucide_style {
+}
+
+.vs_ui_toolbar.blue_style {
+}

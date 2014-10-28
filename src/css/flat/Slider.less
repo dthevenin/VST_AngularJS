@@ -1,0 +1,34 @@
+.vs_ui_slider {
+}
+
+.vs_ui_slider {
+  height: 30px;
+}
+
+// horizontal
+.vs_ui_slider {
+  position: absolute;
+
+  background-color: @grey;
+  .background-image(linear-gradient(180deg, #3FB6F2 0%,#3FB6F2 80%));
+  .border-radius (2px);
+
+  height: 8px;
+  width: 100%;
+
+  content: "";
+}
+
+.vs_ui_slider .handle {
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: @grey;
+  border: 2px solid @white;
+  top: -11px;
+}
+
+.vs_ui_slider .handle:active {
+  background-color: #929292;
+}
+

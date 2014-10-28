@@ -1,0 +1,41 @@
+<html lang="en" ng-app="vinisketch">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-touch.js"></script>
+
+    <script type="text/javascript" src="vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="flat.css"></link>
+    <script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body class="theme application vertical_layout">
+
+  <vs-radio-button index=1 ng-model="momo" id="hehe">
+    <vs-item>Item 1</vs-item>
+    <vs-item class="horizontal_layout"><img src="http://png-5.findicons.com/files/icons/2579/iphone_icons/30/pencil.png" width="30px" height="30px"></img>Item 2</vs-item>
+    <vs-item>Item 3</vs-item>
+  </vs-radio-button>
+
+  <vs-radio-button ng-model="momo">
+    <vs-item>Item 1</vs-item>
+    <vs-item class="horizontal_layout"><img src="http://png-5.findicons.com/files/icons/2579/iphone_icons/30/pencil.png" width="30px" height="30px"></img>Item 2</vs-item>
+    <vs-item>Item 3</vs-item>
+  </vs-radio-button>
+
+  <vs-check-box indexes="[0,2]" ng-model="momoBis">
+    <vs-item>Item 1</vs-item>
+    <vs-item class="horizontal_layout"><img src="http://png-5.findicons.com/files/icons/2579/iphone_icons/30/pencil.png" width="30px" height="30px"></img>Item 2</vs-item>
+    <vs-item>Item 3</vs-item>
+  </vs-check-box>
+
+  <vs-check-box ng-model="momoBis">
+    <vs-item>Item 1</vs-item>
+    <vs-item class="horizontal_layout"><img src="http://png-5.findicons.com/files/icons/2579/iphone_icons/30/pencil.png" width="30px" height="30px"></img>Item 2</vs-item>
+    <vs-item>Item 3</vs-item>
+  </vs-check-box>
+
+  <span>{{momoBis}}</span>
+</body></html>

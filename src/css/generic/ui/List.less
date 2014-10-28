@@ -1,0 +1,172 @@
+.vs_ui_list {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+li {
+  position: relative;
+
+  border: none;
+  background: none;
+  border-radius: 0px;
+  
+  list-style-type: none;
+}
+
+.vs_ui_list.arrow ul li:after
+{
+  .box-sizing(border-box);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+
+/*
+.vs_ui_list.arrow ul li.selected:after
+{
+}
+*/
+
+/* 
+.vs_ui_list.DefaultList > ul > li > div
+{
+  position: absolute;
+  color: #385487;
+  font-weight: normal !important;
+  text-align: right;
+
+  font-weight: bold;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+}
+ */
+
+/*
+.vs_ui_list li.selected > div
+{
+  color: #DDD !important;
+}
+*/
+
+/* 
+.vs_ui_list.DefaultList.arrow > ul > li > div
+{
+  right: 25px;
+}
+ */
+
+.vs_ui_list.DefaultList > ul > li,
+.vs_ui_list.TabList > ul > li > ul > li,
+.vs_ui_list.BlockList > ul > li > ul > li
+{
+  min-height: 38px;
+}
+
+/********************************************************************
+                Default List Item CSS
+*********************************************************************/
+
+/********************************************************************
+                Tab List Item CSS
+*********************************************************************/
+
+.vs_ui_list.TabList > ul > li {
+  padding: 0px;
+}
+
+.vs_ui_list.TabList > ul > li > div {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  border: none;
+}
+
+.vs_ui_list.DefaultList > ul > li > span,
+.vs_ui_list.TabList > ul > li > ul > li > span,
+.vs_ui_list.BlockList > ul > li > ul > li > span
+{
+  font-weight: normal !important;
+  text-align: right;
+
+  font-weight: bold;
+  margin-right: 10px;
+  float: right;
+}
+
+.vs_ui_list.TabList.arrow > ul > li > ul > li > div,
+.vs_ui_list.BlockList.arrow > ul > li > ul > li > div
+{
+  right: 25px;
+}
+
+.vs_ui_list.TabList > .direct_access {
+  z-index: 10;
+  width: 15px;
+  height : auto;
+  right : 10px; top: 45%;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 7px;
+  overflow: hidden;
+  color: rgba(125,125,125,1);
+  background-color: rgba(125,125,125,0.2);
+  padding: 5px 0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.vs_ui_list.TabList > .direct_access > div {
+  font-weight: bold;
+  font-size: .7em;
+  text-align: center;
+  text-transform:capitalize;
+}
+
+.vs_ui_list.TabList > .direct_access:active {
+  background-color: rgba(125,125,125,0.5);
+  color: white;
+/*  text-shadow: rgba(0,0,0,0.398438) 0 1px 0; */
+}
+
+.vs_ui_list.TabList > .direct_access_value {
+  opacity: 0;
+  position: absolute;
+  top: 50%; left: 50%;
+  z-index: 10;
+  width: 45px;
+  height : 45px;
+  background-color: #444;
+  margin-top: -22px;
+  margin-left: -22px;
+  color: white;
+  text-align: center;
+  text-transform:capitalize;
+  line-height: 45px;
+  font-size: 25px;
+}
+
+/********************************************************************
+                Block List Item CSS
+*********************************************************************/
+
+.vs_ui_list.BlockList > ul > li {
+  padding: 0px 0 10px 0;
+}
+
+.vs_ui_list.BlockList > ul > li > div {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}

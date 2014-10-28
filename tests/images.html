@@ -1,0 +1,27 @@
+<html lang="en" ng-app="vinisketch">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-touch.js"></script>
+
+    <script type="text/javascript" src="vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="flat.css"></link>
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <style>
+      .vs_ui_imageview {
+        width:200px;
+        height:200px
+      }
+    </style>
+
+</head>
+<body class="theme application flow_layout">
+  <vs-image src="imageTest.jpg"></vs-image>
+  <vs-image src="imageTest.jpg" strech="none"></vs-image>
+  <vs-image src="imageTest.jpg" strech="fill"></vs-image>
+  <vs-image src="imageTest.jpg" strech="uniform"></vs-image>
+  <vs-image src="imageTest.jpg" strech="uniform-fill"></vs-image>
+</body></html>

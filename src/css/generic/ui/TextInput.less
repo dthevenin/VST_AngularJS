@@ -1,0 +1,60 @@
+.vs_ui_textinput {
+  min-width: 150px; width: 0px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background: white;
+
+  position: relative;
+}
+
+.vs_ui_textinput input[type="search"],
+.vs_ui_textinput input[type="password"],
+.vs_ui_textinput input[type="text"] {
+  .user-select(text);
+  .appearance(none);
+  background: transparent;
+  cursor: text;
+}
+
+.vs_ui_textinput > input {
+  border: none;
+  background: transparent;
+  margin: 0px;
+  font-size: inherit;
+  outline: none;
+  display: block;
+  left: 5px;
+  height: 100%;
+  right: 10px;
+  left: 10px;
+
+  position: absolute;
+  color: inherit;
+}
+
+.vs_ui_textinput > input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.vs_ui_textinput > input::-webkit-search-decoration {
+  display: none;
+}
+
+.vs_ui_textinput .clear_button {
+  position: absolute;
+
+  height: 100%;
+  width: 30px;
+  right: 0px;
+
+  display: none;
+}
+
+.vs_ui_textinput > input:focus + .clear_button {
+  display: block;
+}
+
+.vs_ui_textinput.focus > input {
+  right: 35px;
+}

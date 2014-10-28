@@ -1,0 +1,45 @@
+<html lang="en" ng-app="vinisketch">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-touch.js"></script>
+
+    <script type="text/javascript" src="vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="flat.css"></link>
+    <script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body class="theme application vertical_layout">
+
+  <vs-combobox>
+    <option>Option1</option>
+    <option>Option2</option>
+  </vs-combobox>
+  
+  <vs-combobox value="Option4 selected">
+    <option>Option3</option>
+    <option>Option4 selected</option>
+  </vs-combobox>
+
+  <vs-combobox selected-index=2>
+    <option>Option3</option>
+    <option>Option4</option>
+    <option>Option5 selected</option>
+  </vs-combobox>
+
+  
+  <vs-combobox value="Hehe" ng-model="momo">>
+    <option>Salut</option>
+    <option>Hehe</option>
+  </vs-combobox>
+
+  <vs-combobox value="Hehe" ng-model="momo">>
+    <option>Salut</option>
+    <option>Hehe</option>
+    <option>Hehe2</option>
+  </vs-combobox>
+  <span>{{momo.value}}, {{momo.selectedIndex}}</span>
+
+</body></html>

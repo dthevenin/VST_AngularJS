@@ -1,0 +1,25 @@
+<html lang="en" ng-app="vinisketch">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-touch.js"></script>
+
+    <script type="text/javascript" src="vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="flat.css"></link>
+    <script src="//localhost:35729/livereload.js"></script>
+
+</head>
+<body class="theme application vertical_layout">
+
+  <vs-switch></vs-switch>
+  <vs-switch checked></vs-switch>
+  <vs-switch style="width:60px;" text-on="On" text-off="Off"></vs-switch>
+  <vs-switch checked style="width:60px;" text-on="1" text-off="2" ng-model="momo"></vs-switch>
+  <span>{{momo}}</span>
+
+</script>
+
+
+</body></html>

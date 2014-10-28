@@ -1,0 +1,61 @@
+.vs_ui_segmentedbutton {
+  font-weight: normal;
+  color: @baseColor; 
+}
+
+.vs_ui_segmentedbutton > div > * {
+  .base_background;
+  border-left: 1px solid #fff;  
+  border-right: 1px solid #fff;
+  overflow: visible;
+}
+
+.vs_ui_segmentedbutton input[type="radio"]:checked + label > * {
+  .base_background_selected;
+  //.transform(~"translate3d(-5%,-5%,0) scale(1.1)");
+}
+
+.vs_ui_segmentedbutton > div > *:first-child {
+  border-radius: 4px 0 0 4px;
+  border-left: 0px;  
+}
+
+/***************************************************************************
+                          default button spec
+***************************************************************************/
+
+.vs_ui_segmentedbutton.default {
+  font-size: 20px;
+  height: 43px;
+} 
+
+.vs_ui_segmentedbutton.default > div {
+  line-height:26px;
+	border-radius: 6px;
+}
+
+.vs_ui_segmentedbutton.default > div > * > label > * {
+  height: 43px;
+  padding: 8px 8px 0 8px;
+}
+
+/***************************************************************************
+                          bar button spec
+***************************************************************************/
+
+.vs_ui_segmentedbutton.bar {
+  height: 27px;
+
+  font-size: 0.8em;
+}
+
+.vs_ui_segmentedbutton.bar > div {
+  line-height:18px;
+  border: 1px solid #FFF;
+	border-radius: 6px;
+}
+
+.vs_ui_segmentedbutton.bar > div > * > label > * {
+  height: 25px;
+  padding: 5px 5px 0 5px;
+}

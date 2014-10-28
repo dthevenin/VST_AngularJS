@@ -1,0 +1,46 @@
+.vs_ui_checkbox {
+  font-family: inherit;
+  color:black;
+}
+
+.vs_ui_checkbox label {
+  padding: 9px 35px 0px 16px;
+  height: 40px;
+  border-top: 1px solid #CCCCCC;
+}
+
+.vs_ui_checkbox label:nth-of-type(1) {
+  border: none;
+}
+
+input[type="checkbox"]:active + label,
+.vs_ui_checkbox label:active
+{
+  .base_background_selected;
+}
+
+.vs_ui_checkbox label::after
+{
+  color: @grey;
+  display: block;
+  width: 28px;
+  height: 28px;
+  right: 5px;
+   
+  font: 28px/31px "FontAwesome";
+
+  .translateY(-45%);
+  content: "\f096";
+}
+
+input[type="checkbox"]:checked + label::after
+{
+  content: "\f046";
+  color: @blue;
+}
+
+input[type="checkbox"]:active + label::after,
+.vs_ui_checkbox label:active::after
+{
+  color: @blue;
+}

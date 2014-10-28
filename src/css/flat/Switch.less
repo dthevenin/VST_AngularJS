@@ -1,0 +1,107 @@
+/*
+  Copyright (C) 2009-2012. David Thevenin, ViniSketch SARL (c), and 
+  contributors. All rights reserved
+  
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Lesser General Public License as published
+  by the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+  
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+.vs_ui_switch {
+  height: 30px;
+              
+  min-width: 44px;
+  vertical-align: top;
+
+  font-size: 17px;
+  font-weight: normal;
+  overflow: visible;
+}
+
+.vs_ui_switch > input {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.vs_ui_switch > input + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  background-color: darken(@white, 2%);
+  border: 2px solid @grey;
+  border-radius: 26px;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+              
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.vs_ui_switch > input + label:after {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "";
+}
+
+.vs_ui_switch > input + label:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 2px;
+  left: 24px;
+  content: attr(data-off);
+  text-align: center;
+  color: @grey;
+  line-height: 26px;
+}
+
+.vs_ui_switch > input:checked + label:before {
+  left: 2px;
+  right: 24px;
+  content: attr(data-on);
+  color: @white;
+}
+
+.vs_ui_switch > input + label:after {
+  top: 2px;
+  left: 2px;
+  right: auto;
+
+  border-radius: 11px;
+  width: 22px;
+  height: 22px;
+  background-color: @grey;
+}
+
+.vs_ui_switch > input:checked + label {
+  border-color: @blue;
+  background-color: @blue;
+}
+
+.vs_ui_switch > input:checked + label:after {
+  left: auto;
+  right: 2px;
+  background-color: @white;
+}
