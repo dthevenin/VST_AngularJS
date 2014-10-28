@@ -40,7 +40,7 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['src/js/*.js'], // which files to watch
+        files: ['src/js/*.js', 'src/js/ui/*.js'], // which files to watch
         tasks: ['concat:toolkit'],
         options: {
           nospawn: true
