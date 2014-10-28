@@ -3,18 +3,18 @@ module.exports = function(grunt) {
 
   var sources_js = [
     "src/js/vinisketch.js",
-    "src/js/button.js",
-    "src/js/switch.js",
-    "src/js/textInput.js",
-    "src/js/comboBox.js",
-    "src/js/slider.js",
-    "src/js/progressBar.js",
-    "src/js/item.js",
-    "src/js/radioButton.js",
-    "src/js/checkBox.js",
-    "src/js/segmentedButton.js",
-    "src/js/image.js",
-    "src/js/splitView.js"
+    "src/js/ui/button.js",
+    "src/js/ui/switch.js",
+    "src/js/ui/textInput.js",
+    "src/js/ui/comboBox.js",
+    "src/js/ui/slider.js",
+    "src/js/ui/progressBar.js",
+    "src/js/ui/item.js",
+    "src/js/ui/radioButton.js",
+    "src/js/ui/checkBox.js",
+    "src/js/ui/segmentedButton.js",
+    "src/js/ui/image.js",
+    "src/js/ui/splitView.js"
   ];
   
   grunt.initConfig({
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       },
       toolkit: {
         src: sources_js,
-        dest: 'examples/vs_angular.js'
+        dest: 'tests/vs_angular.js'
       },
     },
     less: {
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
           paths: ["src/css/generic/", "src/css/flat"]
         },
         files: {
-          "examples/flat.css": "src/css/flat/flat.less",
-          "examples/generic.css": "src/css/generic/generic.less"
+          "tests/flat.css": "src/css/flat/flat.less",
+          "tests/generic.css": "src/css/generic/generic.less"
         }
       }
     },
