@@ -1,0 +1,41 @@
+<html lang="en" ng-app="SplitViewApp" ng-controller="AppController">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="../angular.js"></script>
+    <script type="text/javascript" src="../angular-touch.js"></script>
+    <script type="text/javascript" src="../angular-route.js"></script>
+
+    <script type="text/javascript" src="../../../build/vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../build/generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../../build/flat.css"></link>
+
+    <script type="text/javascript" src="splitview_demo.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <style>
+      .vs_ui_imageview {
+        width:200px;
+        height:200px
+      }
+    </style>
+
+</head>
+<body class="application flow_layout">
+
+  <vs-split-view orientation="horizontal">
+  
+  <vs-main-panel class="flow_layout" >
+    <div ng-view class="vertical_layout"></div>
+  </vs-main-panel>
+
+  <vs-secondary-panel class="vertical_layout">
+    <vs-button vs-href="#/" style="white">Buttons</vs-button>
+    <vs-button vs-href="#/slidersPanel" style="white">Sliders</vs-button>
+    <vs-button vs-href="#/switchPanel" style="white">Switches</vs-button>
+  </vs-secondary-panel>
+
+</vs-split-view>
+
+</body></html>
+
