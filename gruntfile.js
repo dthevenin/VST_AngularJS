@@ -3,18 +3,18 @@ module.exports = function(grunt) {
 
   var sources_js = [
     "src/js/vinisketch.js",
-    "src/js/ui/button.js",
-    "src/js/ui/switch.js",
-    "src/js/ui/textInput.js",
-    "src/js/ui/comboBox.js",
-    "src/js/ui/slider.js",
-    "src/js/ui/progressBar.js",
-    "src/js/ui/item.js",
-    "src/js/ui/radioButton.js",
-    "src/js/ui/checkBox.js",
-    "src/js/ui/segmentedButton.js",
-    "src/js/ui/image.js",
-    "src/js/ui/splitView.js",
+    "src/js/elementDirectives/button.js",
+    "src/js/elementDirectives/switch.js",
+    "src/js/elementDirectives/textInput.js",
+    "src/js/elementDirectives/comboBox.js",
+    "src/js/elementDirectives/slider.js",
+    "src/js/elementDirectives/progressBar.js",
+    "src/js/elementDirectives/item.js",
+    "src/js/elementDirectives/radioButton.js",
+    "src/js/elementDirectives/checkBox.js",
+    "src/js/elementDirectives/segmentedButton.js",
+    "src/js/elementDirectives/image.js",
+    "src/js/elementDirectives/splitView.js",
     "src/js/attrDirectives/vsHref.js"
   ];
   
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['src/js/*.js', 'src/js/ui/*.js', 'src/js/attrDirectives/*.js'], // which files to watch
+        files: ['src/js/*.js', 'src/js/elementDirectives/*.js', 'src/js/attrDirectives/*.js'], // which files to watch
         tasks: ['concat:toolkit'],
         options: {
           nospawn: true
