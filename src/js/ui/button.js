@@ -60,7 +60,7 @@ vinisketch.directive ('vsButton', function() {
     
     scope: {
       type: "@",
-      style: "@"
+      style: "@",
     },
 
     controller: function ($scope) {
@@ -69,7 +69,7 @@ vinisketch.directive ('vsButton', function() {
       $scope.style = "white";
     },
     
-    template : "<div>{{value}}</div>",
+    template : "<div ng-transclude>{{value}}</div>",
   
     link: function (scope, element, attrs, controller, transclude) {
 
@@ -94,10 +94,6 @@ vinisketch.directive ('vsButton', function() {
       
       scope.$watch ('type', function (newType) {
         setType (element, scope, newType);
-      });
-      
-      transclude (scope, function (cloned) {
-        scope.value = cloned.text ();
       });
       
       element.on ('$destroy', function() {
