@@ -1,16 +1,17 @@
 vinisketch.directive ('vsSplitView', function() {
   
 
-  function setOrientation (element, newOrient, currentOrient) {
+  function setOrientation (scope, element, newOrient, currentOrient) {
 
-    element.removeClass (currentOrient);
+    element.removeClass ('horizontal');
+    element.removeClass ('vertical');
 
     switch (newOrient) {
       case undefined:
       case null:
       case "":
-        newOrient = "horizontal";
-        break;
+        scope.orientation = "horizontal";
+        return;
       case "horizontal":
       case "vertical":
         break;
@@ -18,19 +19,21 @@ vinisketch.directive ('vsSplitView', function() {
         console.warn ("Unsuported SplitView.orientation: " + newOrient);
         return;
     }
+
     element.addClass (newOrient);
   }
 
-  function setMode (element, newMode, currentMode) {
+  function setMode (scope, element, newMode, currentMode) {
 
-    element.removeClass (currentMode);
+    element.removeClass ('tablet');
+    element.removeClass ('phone');
 
     switch (newMode) {
       case undefined:
       case null:
       case "":
-        newMode = "tablet";
-        break;
+        scope.mode = "tablet";
+        return;
       case "tablet":
       case "phone":
         break;
@@ -38,6 +41,7 @@ vinisketch.directive ('vsSplitView', function() {
         console.warn ("Unsuported SplitView.mode: " + newMode);
         return;
     }
+
     element.addClass (newMode);
   }
 
@@ -59,8 +63,8 @@ vinisketch.directive ('vsSplitView', function() {
     link: function (scope, element, attrs, controller, transclude) {
 
       element.addClass ("vs_ui_splitview");
-      element.addClass (scope.mode);
-      element.addClass (scope.orientation);
+      setMode (scope, element, scope.mode);
+      setOrientation (scope, element, scope.orientation);
 
       var view_node = element[0];
       var main_panel_node;
@@ -84,11 +88,17 @@ vinisketch.directive ('vsSplitView', function() {
       });
 
       scope.$watch ('orientation', function (newOrientation, currentOrientation) {
-        setOrientation (element, newOrientation, currentOrientation);
+        if (angular.isUndefined (newOrientation)) {
+          return;
+        }
+        setOrientation (scope, element, newOrientation, currentOrientation);
       });
       
       scope.$watch ('mode', function (newMode, currentMode) {
-        setMode (element, newMode, currentMode);
+        if (angular.isUndefined (newMode)) {
+          return;
+        }
+        setMode (scope, element, newMode, currentMode);
       });
       
       element.on ('$destroy', function() {
