@@ -5,8 +5,21 @@ var splitViewApp = angular.module('SplitViewApp', [
   'vinisketch'
 ]);
 
-
 splitViewApp.controller ('AppController', function ($scope) {
+  $scope.panels = [
+    {
+      name: "Buttons",
+      href: "#/",
+    },
+    {
+      name: "Sliders",
+      href: "#/slidersPanel",
+    },
+    {
+      name: "Switches",
+      href: "#/switchPanel",
+    }
+  ]
 });
 
 splitViewApp.config (['$routeProvider',

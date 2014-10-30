@@ -13,29 +13,20 @@
     <script type="text/javascript" src="splitview_demo.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
 
-    <style>
-      .vs_ui_imageview {
-        width:200px;
-        height:200px
-      }
-    </style>
-
 </head>
-<body class="application flow_layout">
+<body class="application flow_layout"> 
 
   <vs-split-view orientation="horizontal">
   
-  <vs-main-panel class="flow_layout" >
-    <div ng-view class="vertical_layout"></div>
-  </vs-main-panel>
+    <div class="vertical_layout">
+      <vs-button ng-repeat="panel in panels" vs-href="{{panel.href}}">{{panel.name}}</vs-button>
+    </div>
 
-  <vs-secondary-panel class="vertical_layout">
-    <vs-button vs-href="#/" style="white">Buttons</vs-button>
-    <vs-button vs-href="#/slidersPanel" style="white">Sliders</vs-button>
-    <vs-button vs-href="#/switchPanel" style="white">Switches</vs-button>
-  </vs-secondary-panel>
+    <div class="flow_layout" >
+      <div ng-view class="vertical_layout"></div>
+    </div>
 
-</vs-split-view>
+  </vs-split-view>
 
 </body></html>
 
