@@ -22,9 +22,7 @@
       <vs-button ng-repeat="panel in panels" vs-href="{{panel.href}}">{{panel.name}}</vs-button>
     </div>
 
-    <div class="flow_layout" >
-      <div ng-view class="vertical_layout"></div>
-    </div>
+    <div class="vertical_layout" ng-view></div>
 
   </vs-split-view>
 
