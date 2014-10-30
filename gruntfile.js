@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     "src/js/ui/checkBox.js",
     "src/js/ui/segmentedButton.js",
     "src/js/ui/image.js",
-    "src/js/ui/splitView.js"
+    "src/js/ui/splitView.js",
+    "src/js/attrDirectives/vsHref.js"
   ];
   
   grunt.initConfig({
@@ -40,7 +41,7 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['src/js/*.js', 'src/js/ui/*.js'], // which files to watch
+        files: ['src/js/*.js', 'src/js/ui/*.js', 'src/js/attrDirectives/*.js'], // which files to watch
         tasks: ['concat:toolkit'],
         options: {
           nospawn: true
