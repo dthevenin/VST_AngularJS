@@ -3,7 +3,7 @@
   color: inherit;
 }
 
-li.pressed {
+li:active {
   .base_background_selected;
 }
 
@@ -39,9 +39,9 @@ li.pressed {
   border-top: 1px solid #f0f0f0;
 }
 
-.vs_ui_list.DefaultList > ul > li.pressed:before ,
-.vs_ui_list.BlockList > ul > li > ul > li.pressed:before ,
-.vs_ui_list.TabList > ul > li > ul > li.pressed:before  {
+.vs_ui_list.DefaultList > ul > li:active:before ,
+.vs_ui_list.BlockList > ul > li > ul > li:active:before ,
+.vs_ui_list.TabList > ul > li > ul > li:active:before  {
   left: 0px;
 }
 

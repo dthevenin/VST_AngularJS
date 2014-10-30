@@ -15,6 +15,7 @@ module.exports = function(grunt) {
     "src/js/elemDirectives/segmentedButton.js",
     "src/js/elemDirectives/image.js",
     "src/js/elemDirectives/splitView.js",
+    "src/js/elemDirectives/list.js",
     "src/js/attrDirectives/vsHref.js"
   ];
   
