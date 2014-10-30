@@ -1,5 +1,4 @@
 vinisketch.directive ('vsSplitView', function() {
-  
 
   function setOrientation (scope, element, newOrient, currentOrient) {
 
@@ -49,7 +48,11 @@ vinisketch.directive ('vsSplitView', function() {
     restrict: 'E',
     
     transclude: true,
-    
+
+    replace: true,
+
+    template: "<div class=\"vs_ui_splitview\" ng-transclude></div>",
+
     scope: {
       mode: "@",
       orientation: "@"
@@ -62,30 +65,8 @@ vinisketch.directive ('vsSplitView', function() {
     
     link: function (scope, element, attrs, controller, transclude) {
 
-      element.addClass ("vs_ui_splitview");
       setMode (scope, element, scope.mode);
       setOrientation (scope, element, scope.orientation);
-
-      var view_node = element[0];
-      var main_panel_node;
-      var secondary_panel_node;
-
-      transclude (scope, function (cloned) {
-        
-        for (var i = 0, l = cloned.length; i < l; i++) {
-          var item = cloned [i];
-          if (item.tagName == 'VS-MAIN-PANEL') {
-            main_panel_node = item;
-            item.classList.add ("main_panel");
-          }
-          else if (item.tagName == 'VS-SECONDARY-PANEL') {
-            secondary_panel_node = item;
-            item.classList.add ("secondary_panel");
-          }
-        }
-        view_node.appendChild (secondary_panel_node);
-        view_node.appendChild (main_panel_node);
-      });
 
       scope.$watch ('orientation', function (newOrientation, currentOrientation) {
         if (angular.isUndefined (newOrientation)) {
