@@ -2,27 +2,12 @@ vinisketch.directive ('vsSegmentedButton', function() {
   
   var input_id = 0;
 
-  function setType (element, scope, newType, curentType) {
-
-    if (curentType) element.removeClass (curentType);
-    
-    switch (newType) {
-      case "":
-      case undefined:
-      case null:
-        newType = "default";
-        break;
-      case "bar":
-      case "default":
-        break;
-      default:
-        console.warn ("Unsuported button.type: " + newType);
-        newType = "default";
-        return;
+  function containsType (elem) {
+    if (elem.classList.contains ("default") ||
+        elem.classList.contains ("nav")) {
+      return true;
     }
-
-    scope.type = newType;
-    element.addClass (newType);
+    return false;
   }
 
   return {
@@ -31,12 +16,10 @@ vinisketch.directive ('vsSegmentedButton', function() {
     transclude: true,
     
     scope: {
-      type: "@",
       index: "@"
     },
 
     controller: function ($scope) {
-      $scope.type = "default";
     },
     
     template : "<div></div>",
@@ -44,7 +27,10 @@ vinisketch.directive ('vsSegmentedButton', function() {
     link: function (scope, element, attrs, controller, transclude) {
 
       element.addClass ("vs_ui_segmentedbutton");
-
+      if (!containsType (element [0])) {
+        element.addClass ("default");
+      }
+      
       var view_node = element[0];
       var fieldset_node = view_node.querySelector ('div');
       var id = 'vs_seg_id' + input_id++;
@@ -98,13 +84,6 @@ vinisketch.directive ('vsSegmentedButton', function() {
         selectIndex (scope.index);
       });
 
-      // if (attrs.type) {
-      //   setType (element, scope, attrs.type);
-      // }
-      // else {
-      //   element.addClass (scope.type);
-      // }
-
       scope.$watch ('index', function (index) {
         if (selectIndex (index)) {
           if (attrs.ngModel) {
@@ -122,10 +101,6 @@ vinisketch.directive ('vsSegmentedButton', function() {
 
         //scope.$parent[attrs.ngModel] = scope.index;
       }
-
-      scope.$watch ('type', function (newType, curentType) {
-        setType (element, scope, newType, curentType);
-      });
             
       element.on ('$destroy', function() {
         console.log ("vsSegmentedButton $destroy");
