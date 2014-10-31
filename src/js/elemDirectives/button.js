@@ -41,14 +41,13 @@ vinisketch.directive ('vsButton', function() {
   
     link: function (scope, element, attrs, controller, transclude) {
 
-      var elem = element [0];
+      element.addClass ("vs_ui_button");
       if (!containsType (element [0])) {
         element.addClass ("default");
       }
       if (!containsStyle (element [0])) {
         element.addClass ("white");
       }
-      element.addClass ("vs_ui_button");
 
       element.on ('$destroy', function() {
         console.log ("vsButton $destroy");
