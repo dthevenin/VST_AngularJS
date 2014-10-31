@@ -22,59 +22,45 @@ li {
   list-style-type: none;
 }
 
-.vs_ui_list.arrow ul li:after
-{
+.vs_ui_list.arrow > ul > li:after {
   .box-sizing(border-box);
   position: absolute;
   right: 10px;
   top: 50%;
+  .translateY(-40%);
 }
 
-.vs_ui_list.DefaultList > ul > li,
-.vs_ui_list.TabList > ul > li > ul > li,
-.vs_ui_list.BlockList > ul > li > ul > li
-{
+.vs_ui_list > ul > li {
   min-height: 38px;
+}
+
+.vs_ui_list > div,
+.vs_ui_list > ul > div {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  width: 100%;
+
+  font-weight: normal;
+  text-align: right;
+
+  margin: 0;
 }
 
 /********************************************************************
                 Default List Item CSS
 *********************************************************************/
 
+
 /********************************************************************
                 Tab List Item CSS
 *********************************************************************/
 
-.vs_ui_list.TabList > ul > li {
+.vs_ui_list.tab_list {
   padding: 0px;
 }
 
-.vs_ui_list.TabList > ul > li > div {
-  overflow:hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  border: none;
-}
-
-.vs_ui_list.DefaultList > ul > li > span,
-.vs_ui_list.TabList > ul > li > ul > li > span,
-.vs_ui_list.BlockList > ul > li > ul > li > span
-{
-  font-weight: normal !important;
-  text-align: right;
-
-  font-weight: bold;
-  margin-right: 10px;
-  float: right;
-}
-
-.vs_ui_list.TabList.arrow > ul > li > ul > li > div,
-.vs_ui_list.BlockList.arrow > ul > li > ul > li > div
-{
-  right: 25px;
-}
-
-.vs_ui_list.TabList > .direct_access {
+.vs_ui_list.tab_list > .direct_access {
   z-index: 10;
   width: 15px;
   height : auto;
@@ -92,20 +78,19 @@ li {
   transform: translate3d(0, -50%, 0);
 }
 
-.vs_ui_list.TabList > .direct_access > div {
+.vs_ui_list.tab_list > .direct_access > div {
   font-weight: bold;
   font-size: .7em;
   text-align: center;
   text-transform:capitalize;
 }
 
-.vs_ui_list.TabList > .direct_access:active {
+.vs_ui_list.tab_list > .direct_access:active {
   background-color: rgba(125,125,125,0.5);
   color: white;
-/*  text-shadow: rgba(0,0,0,0.398438) 0 1px 0; */
 }
 
-.vs_ui_list.TabList > .direct_access_value {
+.vs_ui_list.tab_list > .direct_access_value {
   opacity: 0;
   position: absolute;
   top: 50%; left: 50%;
@@ -126,12 +111,7 @@ li {
                 Block List Item CSS
 *********************************************************************/
 
-.vs_ui_list.BlockList > ul > li {
+.vs_ui_list.block_list {
   padding: 0px 0 10px 0;
 }
 
-.vs_ui_list.BlockList > ul > li > div {
-  overflow:hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-}

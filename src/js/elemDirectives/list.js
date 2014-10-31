@@ -5,17 +5,19 @@ vinisketch.directive ('vsList', function() {
     transclude: true,
     replace: true,
     
-    scope: {},
+    scope: {
+      title: "@"
+    },
 
     controller: function ($scope) {},
     
-    template: "<div class=\"vs_ui_list DefaultList\"><ul ng-transclude/></div>",
+    template: "<div class=\"vs_ui_list\"><div>{{title}}</div><ul ng-transclude/></div>",
 
     link: function (scope, element, attrs, controller, transclude) {
+
       element.on ('$destroy', function() {
         console.log ("vsList $destroy");
       });
     }
   };
-                      
 });
