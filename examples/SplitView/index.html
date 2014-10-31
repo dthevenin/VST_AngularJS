@@ -19,7 +19,9 @@
   <vs-split-view orientation="horizontal">
   
     <div class="vertical_layout">
-      <vs-button ng-repeat="panel in panels" vs-href="{{panel.href}}">{{panel.name}}</vs-button>
+      <vs-list>
+        <li ng-repeat="panel in panels" vs-href="{{panel.href}}">{{panel.name}}</li>
+      </vs-list>
     </div>
 
     <div class="vertical_layout" ng-view></div>
