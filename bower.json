@@ -1,0 +1,23 @@
+{
+  "name": "VSD_AngularJS",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "David Thevenin",
+    "email": "david.thevenin@gmail.com"
+  },
+  "dependencies": {
+    "iscroll": "*"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "../",
+    "demos",
+    "examples"
+  ]
+}

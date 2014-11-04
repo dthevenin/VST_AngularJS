@@ -14,6 +14,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "bower": "*",
     "grunt": "0.4.x",
     "grunt-contrib-less": "0.x.x",
     "grunt-contrib-watch": "0.x.x",

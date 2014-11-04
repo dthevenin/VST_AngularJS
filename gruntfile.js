@@ -16,7 +16,8 @@ module.exports = function(grunt) {
     "src/js/elemDirectives/image.js",
     "src/js/elemDirectives/splitView.js",
     "src/js/elemDirectives/list.js",
-    "src/js/attrDirectives/vsHref.js"
+    "src/js/attrDirectives/vsHref.js",
+    "src/js/attrDirectives/vsScrollable.js"
   ];
   
   grunt.initConfig({
@@ -38,6 +39,12 @@ module.exports = function(grunt) {
           "build/flat.css": "src/css/flat/flat.less",
           "build/generic.css": "src/css/generic/generic.less"
         }
+      }
+    },
+    copy: {
+      iscroll: {
+        src: 'bower_components/iscroll/build/iscroll.js',
+        dest: 'build/iscroll.js'
       }
     },
     watch: {
@@ -70,6 +77,7 @@ module.exports = function(grunt) {
 
   // tasks
   grunt.registerTask('build', [
+    'copy:iscroll',
     'concat:toolkit',
     'less:development'
   ]);
