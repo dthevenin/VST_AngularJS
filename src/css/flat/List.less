@@ -7,7 +7,7 @@ li:active {
   .base_background_selected;
 }
 
-.vs_ui_list.arrow > ul > li:after {
+.vs_ui_list.arrow > fieldset > ul > li:after {
   font: 18px/18px "FontAwesome";
   content: "\f054";
   color: #555;
@@ -17,27 +17,27 @@ li:active {
                 Default List Item CSS
 *********************************************************************/
 
-.vs_ui_list > ul > li
+.vs_ui_list > fieldset > ul > li
 {
   padding: 10px 23px 10px 16px;
   border-top: 1px solid #f0f0f0;
   color: inherit;
 }
 
-.vs_ui_list > ul > li:first-child {
+.vs_ui_list > fieldset > ul > li:first-child {
   border: none !important;
 }
 
-.vs_ui_list > div,
-.vs_ui_list > ul > div {
+.vs_ui_list > fieldset > div,
+.vs_ui_list > fieldset > ul > div {
   color: #666;
   background-color: #E9E9E9;
   font-weight: normal;
   padding: 4px 10px 4px 10px;
 }
 
-.vs_ui_list > div:empty,
-.vs_ui_list > ul > div:empty {
+.vs_ui_list > fieldset > div:empty,
+.vs_ui_list > fieldset > ul > div:empty {
   display:none;
 }
 
@@ -61,7 +61,7 @@ li:active {
   .border-radius (0px);
 }
 
-.vs_ui_list.block_list > ul {
+.vs_ui_list.block_list > fieldset > ul {
   margin: 10px 0 10px 0;
   background-color: white;
   margin: 0px;
@@ -72,7 +72,7 @@ li:active {
   border-bottom: 1px solid @grey;
 }
 
-.vs_ui_list.tab_list > .direct_access {
+.vs_ui_list.tab_list .direct_access {
   right: 0px;
   background-color: transparent;
   position: absolute;
@@ -82,7 +82,7 @@ li:active {
   padding: 5px 2px 5px 0px;
 }
 
-.vs_ui_list.tab_list > .direct_access:active {
+.vs_ui_list.tab_list .direct_access:active {
   background-color: transparent;
   color: @baseColor;
   text-shadow: none;
