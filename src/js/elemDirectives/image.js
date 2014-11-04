@@ -79,6 +79,9 @@ vinisketch.directive ('vsImage', function() {
       view_node.__width = this.width;
       view_node.__height = this.height;
       configureImageSize (scope.strech, view_node, image_node);
+      if (view_node.__iscroll) {
+        view_node.__iscroll.refresh ();
+      }
     };
     image.src = src;
   }
