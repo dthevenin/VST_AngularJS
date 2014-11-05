@@ -1,4 +1,4 @@
-<html lang="en" ng-app="vinisketch">
+<html lang="en" ng-app="myApp">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     
@@ -12,13 +12,38 @@
     <script src="//localhost:35729/livereload.js"></script>
     <style type="text/css">
     .vs_ui_list {
-      height: auto;
+      height: 200px;
+      width: 100%;
+    }
+
+    .vs_ui_imageview {
+      width: 200px;
+      height: 200px;
+    }
+
+    #image1 {
+      top: 200px;
+    }
+    
+    #image2 {
+      top: 200px;
+      left: 200px;
     }
     </style>
-</head>
-<body class="theme application horizontal_layout">
 
-    <vs-list style="height:200px;" vs-scrollable>
+    <script>
+ angular.module ('myApp', ["vinisketch"])
+   .controller ('appController', function ($scope) {
+     $scope.scrollOptions = {
+      scrollX: true,
+      scrollY: false
+     };
+   });
+</script>
+</head>
+<body class="theme application absolute_layout" ng-controller="appController">
+
+    <vs-list vs-scrollable>
       <li>item1</li>
       <li>item2</li>
       <li>item3</li>
@@ -35,5 +60,10 @@
       <li>item2</li>
       <li>item3</li>
     </vs-list>
+
+    <vs-image id="image1" src="imageTest.jpg" vs-scrollable="{'scrollX': true}"></vs-image>
+
+    <vs-image id="image2" src="imageTest.jpg" vs-scrollable="scrollOptions"></vs-image>
+
   
 </body></html>
