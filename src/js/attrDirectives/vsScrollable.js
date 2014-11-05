@@ -25,6 +25,14 @@ vinisketch.directive ('vsScrollable', function () {
         element[0].__iscroll = new window.IScroll (element[0], options);
       }
 
+      // options parse
+      if (attr.vsScrollable) {
+        var tmp_options = scope.$eval (attr.vsScrollable);
+        for (var key in tmp_options) {
+          options [key] = tmp_options [key];
+        }
+      }
+
       // watch for 'ng-scrollable' directive in html code
       scope.$watch (attr.vsScrollable, function () {
         if (attr.vsScrollable == undefined) {
