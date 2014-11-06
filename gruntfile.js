@@ -16,6 +16,7 @@ module.exports = function(grunt) {
     "src/js/elemDirectives/image.js",
     "src/js/elemDirectives/splitView.js",
     "src/js/elemDirectives/list.js",
+    "src/js/elemDirectives/toolBar.js",
     "src/js/attrDirectives/vsHref.js",
     "src/js/attrDirectives/vsScrollable.js"
   ];
@@ -45,6 +46,18 @@ module.exports = function(grunt) {
       iscroll: {
         src: 'bower_components/iscroll/build/iscroll.js',
         dest: 'build/iscroll.js'
+      },
+      angular: {
+        src: 'bower_components/angular/angular.js',
+        dest: 'build/angular.js'
+      },
+      angular_route: {
+        src: 'bower_components/angular-route/angular-route.js',
+        dest: 'build/angular-route.js'
+      },
+      angular_touch: {
+        src: 'bower_components/angular-touch/angular-touch.js',
+        dest: 'build/angular-touch.js'
       },
       fontawesome: {
         src: 'bower_components/fontawesome/css/font-awesome.css',
