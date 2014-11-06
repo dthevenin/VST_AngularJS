@@ -2,10 +2,11 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     
-    <script type="text/javascript" src="angular.js"></script>
-    <script type="text/javascript" src="angular-touch.js"></script>
+    <script type="text/javascript" src="../build/angular.js"></script>
+    <script type="text/javascript" src="../build/angular-touch.js"></script>
 
     <script type="text/javascript" src="../build/vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="../build/font-awesome.css"></link>
     <link rel="stylesheet" type="text/css" href="../build/generic.css"></link>
     <link rel="stylesheet" type="text/css" href="../build/flat.css"></link>
     <script src="//localhost:35729/livereload.js"></script>
@@ -18,6 +19,16 @@
     body > div {
       height: 50%;
     }
+
+    .vs_ui_toolbar label > .icon {
+      font-size: 10px;
+      padding: 5px;
+    }
+
+    .icon .fa {
+      font-size: 24px;
+    }
+    
     </style>
 
 </head>
@@ -32,9 +43,10 @@
 
   <div>
     <vs-tool-bar class="black_style">
-      <div class="icon1">Item 1</div>
-      <div class="icon1">Item 2</div>
-      <div class="icon1">Item 3</div>
+      <div class="icon"><i class="fa fa-download"></i><div>Item 1</div></div>
+      <div class="icon"><i class="fa fa-tags"></i><div>Item 2</div></div>
+      <div class="icon"><i class="fa fa-area-chart"></i><div>Item 3</div></div>
+      <div class="icon"><i class="fa fa-medkit"></i><div>Item 4</div></div>
     </vs-tool-bar>
   </div>
 
