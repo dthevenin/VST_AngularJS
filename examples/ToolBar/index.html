@@ -1,0 +1,59 @@
+<html lang="en" ng-app="ToolBarApp" ng-controller="AppController">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript" src="../../../build/angular.js"></script>
+    <script type="text/javascript" src="../../../build/angular-touch.js"></script>
+    <script type="text/javascript" src="../../../build/angular-route.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../build/font-awesome.css"></link>
+
+    <script type="text/javascript" src="../../../build/vs_angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../build/generic.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../../build/flat.css"></link>
+
+    <script type="text/javascript" src="toolbar_demo.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <style type="text/css">
+    .vs_ui_toolbar label > * {
+      padding-top: 24px;
+    }
+
+    body > div {
+      height: 50%;
+    }
+
+    .vs_ui_toolbar label > .icon {
+      font-size: 10px;
+      padding: 5px;
+    }
+
+    .icon .fa {
+      font-size: 24px;
+    }
+
+    .main_view {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+    .vs_ui_button,
+    .vs_ui_switch {
+      margin-bottom: 10px;
+    }
+    </style>
+    
+</head>
+<body class="application absolute_layout">
+
+  <div class="vertical_layout main_view" ng-view></div>
+
+  <vs-tool-bar class="black_style">
+    <div class="icon" vs-href="#/"><i class="fa fa-download"></i><div>Buttons</div></div>
+    <div class="icon" vs-href="#/slidersPanel"><i class="fa fa-tags"></i><div>Sliders</div></div>
+    <div class="icon" vs-href="#/switchPanel"><i class="fa fa-area-chart"></i><div>Switches</div></div>
+  </vs-tool-bar>
+
+</body></html>
+
