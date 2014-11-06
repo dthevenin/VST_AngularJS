@@ -60,8 +60,13 @@ module.exports = function(grunt) {
         dest: 'build/angular-touch.js'
       },
       fontawesome: {
-        src: 'bower_components/fontawesome/css/font-awesome.css',
-        dest: 'build/font-awesome.cs'
+        expand: true,
+        flatten: true,
+        src: [
+          'bower_components/fontawesome/css/font-awesome.css',
+          'bower_components/fontawesome/fonts/fontawesome-webfont.ttf'
+        ],
+        dest: 'build/'
       }
     },
     watch: {
