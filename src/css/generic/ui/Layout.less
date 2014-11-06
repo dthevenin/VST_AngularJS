@@ -3,15 +3,13 @@
 *********************************************************************/
 
 .vs_ui_popover >.center.absolute_layout,
-.absolute_layout
-{
+.absolute_layout {
   display: block;
 }
 
 .vs_ui_popover >.center.absolute_layout > *,
-.absolute_layout > *
-{
-  position: absolute !important;
+.absolute_layout > * {
+  position: absolute;
 }
 
 /********************************************************************
@@ -19,19 +17,17 @@
 *********************************************************************/
 
 .vs_ui_popover >.center.flow_layout,
-.flow_layout
-{
+.flow_layout {
   display: block;
 }
 
 .vs_ui_popover >.center.flow_layout > *,
-.flow_layout > *
-{
+.flow_layout > * {
   display: inline-block;
 
-  top: 0px !important;
-  left: 0px !important;
-  position: relative !important;
+  top: 0px;
+  left: 0px;
+  position: relative;
 }
 
 /********************************************************************
@@ -39,22 +35,20 @@
 *********************************************************************/
 
 .vs_ui_popover >.center.vertical_layout,
-.vertical_layout
-{
-  display: -webkit-flex !important;
-  display: -moz-flex !important;
-  display: flex !important;
+.vertical_layout {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
   .flex-direction(column);
 }
 
 .vs_ui_popover >.center.vertical_layout > *,
-.vertical_layout > *
-{
+.vertical_layout > * {
   .flex-grow(0);
   .flex-shrink(0);
-  top: 0px !important;
-  left: 0px !important;
-  position: relative !important;
+  top: 0px;
+  left: 0px;
+  position: relative;
 }
 
 /********************************************************************
@@ -62,21 +56,19 @@
 *********************************************************************/
 
 .vs_ui_popover >.center.horizontal_layout,
-.horizontal_layout
-{
-  display: -webkit-flex !important;
-  display: -moz-flex !important;
-  display: flex !important;
+.horizontal_layout {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
   .flex-direction(row);
   .flex-wrap(nowrap);
 }
 
 .vs_ui_popover >.center.horizontal_layout > *,
-.horizontal_layout > *
-{
+.horizontal_layout > * {
   .flex-grow(0);
   .flex-shrink(0);
-  top: 0px !important;
-  left: 0px !important;
-  position: relative !important;
+  top: 0px;
+  left: 0px;
+  position: relative;
 }
