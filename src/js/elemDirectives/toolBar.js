@@ -19,7 +19,7 @@ vinisketch.directive ('vsToolBar', function() {
       element.addClass ("vs_ui_toolbar");
       
       var view_node = element[0];
-      var id = 'vs_seg_id' + input_id++;
+      var id = 'vs_toolbar_id' + input_id++;
       var index = 0;
 
       function selectIndex (index) {
