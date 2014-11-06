@@ -15,7 +15,6 @@ vinisketch.directive ('vsHref', function ($timeout, $location) {
         var button = e.which || e.button;
         if ( !(button > 1 || e.ctrlKey || e.metaKey || e.shiftKey || element.attr ('target')) ) {
           document.location.href = ref;
-          e.preventDefault();
         }
       });
     }
