@@ -45,6 +45,10 @@ module.exports = function(grunt) {
       iscroll: {
         src: 'bower_components/iscroll/build/iscroll.js',
         dest: 'build/iscroll.js'
+      },
+      fontawesome: {
+        src: 'bower_components/fontawesome/css/font-awesome.css',
+        dest: 'build/font-awesome.cs'
       }
     },
     watch: {
@@ -77,7 +81,7 @@ module.exports = function(grunt) {
 
   // tasks
   grunt.registerTask('build', [
-    'copy:iscroll',
+    'copy',
     'concat:toolkit',
     'less:development'
   ]);
