@@ -59,6 +59,15 @@ module.exports = function(grunt) {
         src: 'bower_components/angular-touch/angular-touch.js',
         dest: 'build/angular-touch.js'
       },
+      angular_animate: {
+        expand: true,
+        flatten: true,
+        src: [
+          'bower_components/angular-animate/angular-animate.js',
+          'bower_components/animate.css/animate.css'
+        ],
+        dest: 'build/'
+      },
       fontawesome: {
         expand: true,
         flatten: true,
