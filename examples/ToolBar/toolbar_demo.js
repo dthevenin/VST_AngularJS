@@ -2,7 +2,8 @@
 
 var ToolBarApp = angular.module('ToolBarApp', [
   'ngRoute',
-  'vinisketch'
+  'vinisketch',
+  'ngAnimate'
 ]);
 
 ToolBarApp.controller ('AppController', function ($scope) {

@@ -5,6 +5,9 @@
     <script type="text/javascript" src="../../../build/angular.js"></script>
     <script type="text/javascript" src="../../../build/angular-touch.js"></script>
     <script type="text/javascript" src="../../../build/angular-route.js"></script>
+    <script type="text/javascript" src="../../../build/angular-animate.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../build/animate.css"></link>
 
     <link rel="stylesheet" type="text/css" href="../../../build/font-awesome.css"></link>
 
@@ -42,12 +45,26 @@
     .vs_ui_switch {
       margin-bottom: 10px;
     }
+
+    .animation.ng-enter {  
+      -webkit-animation: fadeInRight 1s;
+      -moz-animation: fadeInRight 1s;
+      -ms-animation: fadeInRight 1s;
+      animation: fadeInRight 1s;
+    }
+    
+    .animation.ng-leave {  
+      -webkit-animation: fadeOutLeft 1s;
+      -moz-animation: fadeOutLeft 1s;
+      -ms-animation: fadeOutLeft 1s;
+      animation: fadeOutLeft 1s;
+    }
     </style>
     
 </head>
 <body class="application absolute_layout">
 
-  <div class="vertical_layout main_view" ng-view></div>
+  <div class="vertical_layout main_view animation" ng-view></div>
 
   <vs-tool-bar class="black_style">
     <div class="icon" vs-href="#/"><i class="fa fa-download"></i><div>Buttons</div></div>
